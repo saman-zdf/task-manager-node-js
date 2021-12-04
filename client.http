@@ -1,0 +1,23 @@
+### get task
+GET http://localhost:5000/api/v1/task
+
+
+### post: create task
+POST http://localhost:5000/api/v1/task
+Content-Type: application/json
+
+{
+  "name": "Dany"
+}
+
+
+### get: single task
+GET http://localhost:5000/api/v1/task/1
+
+
+### patch: update task
+PATCH  http://localhost:5000/api/v1/task/1
+
+
+### delete: delete update task
+DELETE  http://localhost:5000/api/v1/task/1
