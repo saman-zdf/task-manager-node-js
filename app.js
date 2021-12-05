@@ -8,15 +8,11 @@ const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(express.json());
-
-// Routes
-app.get('/hello', (req, res) => {
-  res.send('Task Manager App');
-});
+app.use(express.static('./public'));
 
 // Import and apply task router
 const tasksRouter = require('./routers/tasks');
-app.use('/api/v1/task', tasksRouter);
+app.use('/api/v1/tasks', tasksRouter);
 
 const start = async () => {
   try {
